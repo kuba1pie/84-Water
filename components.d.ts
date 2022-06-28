@@ -11,8 +11,6 @@ declare module '@vue/runtime-core' {
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
     TheHeader: typeof import('./src/components/TheHeader.vue')['default']
     UserProfile: typeof import('./src/components/Home/UserProfile.vue')['default']
-    'UserProfile copy': typeof import("./src/components/Home/UserProfile copy.vue")["default"];
-    UsersFilter: typeof import("./src/components/Home/UsersFilter.vue")["default"];
     UsersList: typeof import('./src/components/Home/UsersList.vue')['default']
   }
 }

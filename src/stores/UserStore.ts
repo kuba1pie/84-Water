@@ -53,7 +53,6 @@ export const useUserStore = defineStore("UserStore", {
         arr = window.localStorage.getItem("favUsers");
         this.favUsers = JSON.parse(arr);
       }
-
     },
     favUser(id: number) {
       let arr = this.favUsers;

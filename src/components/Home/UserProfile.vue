@@ -1,9 +1,16 @@
 <template>
   <q-card>
-    <q-card-section class="row items-center q-pb-none">
-      <div class="text-h6">The User {{ store.user.id }}</div>
+    <q-card-section class="column items-center q-pb">
+      <div class="text-h6">The User</div>
       <q-space />
 
+      {{ store.user.first_name }}
+      {{ store.user.last_name }}
+      {{ store.user.email }}
+      {{ store.user.avatar }}
+      <q-avatar size="200px">
+        <img :src="store.user.avatar" />
+      </q-avatar>
       <q-btn
         push
         color="white"
@@ -26,7 +33,7 @@
       >
         <q-tooltip> Add to favorites</q-tooltip>
       </q-btn>
-      {{ store.user }}
+      {{ $route.params.id }}
     </q-card-section>
   </q-card>
 </template>
@@ -34,8 +41,8 @@
 import { useUserStore } from "@/stores/UserStore";
 import { useRouter } from "vue-router";
 const router = useRouter();
-
 const store = useUserStore();
+
 const onBackClick = () => {
   router.back();
 };
