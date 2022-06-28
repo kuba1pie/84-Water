@@ -1,0 +1,23 @@
+{
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "components.d.ts"],
+  "noImplicitAny": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "esnext",
+    "target": "esnext",
+    "jsx": "preserve",
+    "lib": ["DOM", "ESNext"],
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.vite-config.json"
+    }
+  ]
+}
